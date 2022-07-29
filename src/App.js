@@ -1,7 +1,9 @@
+import React from "react";
+import Products from "./Pages/Products";
 function App() {
   return (
     <div>
-      <h1>Let's Go</h1>
+      <Products />
     </div>
   );
 }
