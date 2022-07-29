@@ -5,6 +5,8 @@ import Box from '../Components/Box';
 import Navbar from '../Components/Navbar';
 import axios from "axios";
 
+import "../products.css"
+
 const Products = () => {
     const [products, setProducts] = useState(null);
     const fetchProducts = async () => {
@@ -17,7 +19,7 @@ const Products = () => {
     }, [])
     return (
       <div className="productsDiv">
-        <Navbar />
+        <Navbar auth = {true} />
         <Container style={{marginTop:"50px"}}>
           <Grid
             container

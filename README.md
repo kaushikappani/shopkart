@@ -79,3 +79,6 @@ More info about API usage can be found at the [Postman Collection](https://www.g
 - Well explained readme (screenshot etc)
 
 ---
+
+
+backgroundColor: "#6EA9F7", color: "#153A8C"

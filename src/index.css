@@ -12,9 +12,7 @@ code {
     monospace;
 }
 
-.MuiPaper-root {
-  height: 100% !important;
-}
+
 
 .image{
   transition: transform .2s; 
@@ -25,9 +23,15 @@ code {
 
 .imageDiv{
   overflow: hidden !important;
-  background-color: red;
+  background-color: #F0F8FF;
 }
 
 .productsDiv{
-  background-color: #dbe3e0;
+  background-color: #F0F8FF;
+}
+
+.sizeDiv button{
+  border-radius:10%;
+  height: 40px;
+  margin:3px
 }

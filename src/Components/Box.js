@@ -7,25 +7,28 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Typography from "@mui/material/Typography";
 import { Button, Chip } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Box = ({data}) => {
   return (
     <Card className="imageCard" sx={{ maxWidth: 345 }}>
       <div className="imageDiv">
-        <CardMedia
-          className="image"
-          component="img"
-          alt={data.title}
-          height="300"
-          image={data.image}
-        />
+        <Link to={"/product/"+data.id}>
+          <CardMedia
+            className="image"
+            component="img"
+            alt={data.title}
+            height="300"
+            image={data.image}
+          />
+        </Link>
       </div>
 
       <CardContent>
         <Typography gutterBottom variant="p" component="div">
           {data.title}
         </Typography>
-        Rs. {data.amount}
+        ₹ {data.amount}
         <Chip
           style={{ float: "right" }}
           label={data.rating}
