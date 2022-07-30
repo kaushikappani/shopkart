@@ -1,3 +1,4 @@
+//imports
 import { Grid } from '@mui/material'
 import { Container } from '@mui/system'
 import React, { useEffect, useState } from 'react'
@@ -8,10 +9,10 @@ import Summary from '../Components/Summary';
 
    
 const Cart = () => {
-     const [products, setProducts] = useState(null);
-     const fetchProducts = async () => {
-       const { data } = await axios.get("/products");
-       console.log(data);
+     const [products, setProducts] = useState(null);      // Cart Products State
+     const fetchProducts = async () => {                  // Fetching Cart Products
+       const { data } = await axios.get("/products");    // For Example we kept all the products in Cart
+       console.log(data); 
        setProducts(data);
      };
      useEffect(() => {
