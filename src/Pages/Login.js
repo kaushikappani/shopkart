@@ -1,7 +1,8 @@
+//imports
 import { Grid, TextField, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React from "react";
-import Navbar from "../Components/Navbar";
+import Navbar from "../Components/Navbar";            // importing NAVBAR component
 
 const Login = () => {
   return (
