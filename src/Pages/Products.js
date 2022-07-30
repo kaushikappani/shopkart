@@ -1,21 +1,22 @@
+// imports
 import { Grid } from '@mui/material';
 import { Container } from '@mui/system';
 import React, { useEffect, useState } from 'react'
 import Box from '../Components/Box';
 import Navbar from '../Components/Navbar';
 import axios from "axios";
-
+//import css
 import "../products.css"
 
 const Products = () => {
-    const [products, setProducts] = useState(null);
-    const fetchProducts = async () => {
+    const [products, setProducts] = useState(null);     // products State initially set to null
+    const fetchProducts = async () => {                 // fetch contents function 
         const { data } = await axios.get("/products");
         console.log(data);
-        setProducts(data);
+        setProducts(data);                              // updating products state
     }
     useEffect(() => {
-        fetchProducts();
+        fetchProducts();                                // calling fetch function
     }, [])
     return (
       <div className="productsDiv">
@@ -27,7 +28,7 @@ const Products = () => {
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
             {products &&
-              products.map((item) => {
+              products.map((item) => {                // iterating over products
                 return (
                   <Grid item xs={6} sm={6} md={3} key={item.id}>
                     <Box className="boxStyle" data={item} />
