@@ -1,3 +1,4 @@
+//imports
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -7,6 +8,7 @@ import { Grid, Rating, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 
+//styles
 const imageStyle = {
   maxHeight: "500px",
   padding: "30px",
@@ -14,12 +16,12 @@ const imageStyle = {
 };
 
 const DetailPage = () => {
-  const { id } = useParams();
-  const [data, setData] = useState(null);
-  const fetch = async () => {
+  const { id } = useParams();                     // parameter passed with URL (ID)
+  const [data, setData] = useState(null);         // Data State
+  const fetch = async () => {                     // fetch function
     const { data } = await axios.get("/products");
     setData(
-      data.filter((d) => {
+      data.filter((d) => {                         // Data filtering 
         return d.id == id;
       })
     );
@@ -60,7 +62,6 @@ const DetailPage = () => {
               >
                 Inclusive of all taxes
               </Typography>
-
               <div className="sizeDiv">
                 <Button variant="outlined">S</Button>
                 <Button variant="outlined">M</Button>
