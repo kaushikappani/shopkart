@@ -12,9 +12,17 @@
 - `npm run server` - To start the JSON server
 - `npm start` - To start the react app
 
+## Routes
+
+| Endpoint | Result |
+|------------------------------|-----------------------------------------------------|
+| / | Products Page |
+| /Login | Login Page |
+| /cart | Shopping Cart Page  
+| /product/:id | Single Product
 
 
-## This project's user interface should like this.
+## UI
 
 ### Login/Register page
 ![Home page](/UI/UIlogin.png)
@@ -34,11 +42,4 @@
 ![Home page](/UI/UIcart.png)
 
 
-## Routes
 
-| Endpoint | Result |
-|------------------------------|-----------------------------------------------------|
-| / | Products Page |
-| /Login | Login Page |
-| /cart | Shopping Cart Page  
-| /product/:id | Single Product
