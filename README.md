@@ -36,7 +36,6 @@
 
 ## Routes
 
-API can be launched using npm run server.
 | Endpoint | Result |
 |------------------------------|-----------------------------------------------------|
 | / | Products Page |
