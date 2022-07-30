@@ -10,11 +10,11 @@ import Typography from "@mui/material/Typography";
 import { Button, Chip } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Box = ({data}) => {
+const Box = ({data}) => {          // data as parameter form parent 
   return (
     <Card className="imageCard" sx={{ maxWidth: 345 }}>
       <div className="imageDiv">
-        <Link to={"/product/"+data.id}>
+        <Link to={"/product/"+data.id}>     
           <CardMedia
             className="image"
             component="img"

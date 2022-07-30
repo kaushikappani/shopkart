@@ -6,7 +6,14 @@ import DetailPage from "./Pages/DetailPage";
 import Cart from "./Pages/Cart";
 import Login from "./Pages/Login";
 
-// App Component Which routes pages
+// App Component Which routes 
+
+/*
+    /       - Home Products page
+    /login  - Login Page 
+    /product/:id  - DetailsPage    id as paramater
+    /cart      - Cart Page
+*/  
 
 function App() {
 

@@ -1,3 +1,5 @@
+//imports 
+// imports Material UI
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -13,12 +15,11 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { Link } from "react-router-dom";
-const pages = ["Products","Cart"];
 const settings = ["Logout"];
 const Navbar = ({auth}) => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null)
+  const [anchorElNav, setAnchorElNav] = React.useState(null)               // React States for state open and close
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
+  // handle open and close functions
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };

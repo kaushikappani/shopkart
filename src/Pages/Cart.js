@@ -4,7 +4,7 @@ import { Container } from '@mui/system'
 import React, { useEffect, useState } from 'react'
 import Navbar from '../Components/Navbar';
 import CartItem from '../Components/CartItem';
-import axios from "axios";
+import axios from "axios"; 
 import Summary from '../Components/Summary';
 
    
@@ -13,7 +13,7 @@ const Cart = () => {
      const fetchProducts = async () => {                  // Fetching Cart Products
        const { data } = await axios.get("/products");    // For Example we kept all the products in Cart
        console.log(data); 
-       setProducts(data);
+       setProducts(data);                                // updating Products State
      };
      useEffect(() => {
        fetchProducts();
@@ -26,11 +26,11 @@ const Cart = () => {
             <Grid style={{ paddingTop: "30px" }} item xs={12} sm={12} md={7}>
               {products &&
                 products.map((item) => {
-                  return <CartItem data={item} />;
+                  return <CartItem data={item} />;         // sending data as parameter to CartItem component
                 })}
             </Grid>
             <Grid style={{ paddingTop: "30px" }} item xs={12} sm={12} md={4}>
-              <Summary />
+              <Summary />                                  
             </Grid>
           </Grid>
         </Container>

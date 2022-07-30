@@ -1,6 +1,8 @@
+// imports
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
 
+//styles
 const imageStyle = {
     width: "100%",
     maxWidth: "100px",
@@ -8,7 +10,8 @@ const imageStyle = {
     marginLeft: "auto",
     marginRight:"auto"
 }
-const CartItem = ({data}) => {
+const CartItem = ({ data }) => {    // data as parameter
+  
   return (
     <Grid
       style={{

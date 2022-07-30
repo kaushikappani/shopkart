@@ -1,8 +1,11 @@
+//imports 
 import { Button, Typography } from '@mui/material';
 import React from 'react';
 
 
 const Summary = () => {
+
+  //summary Componment in cart page
   return (
     <div style={{ paddintTop: "10px", marginLeft: "10px" }}>
       <Typography align="center">PRICE DETAILS</Typography>
