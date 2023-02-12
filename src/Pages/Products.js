@@ -8,12 +8,15 @@ import axios from "axios";
 //import css
 import "../products.css"
 
+//import fake db
+import data from "../db.json"
 const Products = () => {
     const [products, setProducts] = useState(null);     // products State initially set to null
-    const fetchProducts = async () => {                 // fetch contents function 
-        const { data } = await axios.get("/products");
-        console.log(data);
-        setProducts(data);                              // updating products state
+    const fetchProducts = async () => {                 // fetch contents function
+        // const { data } = await axios.get("/products");
+        // console.log(data);
+      
+      setProducts(data.products);                              // updating products state
     }
     useEffect(() => {
         fetchProducts();                                // calling fetch function

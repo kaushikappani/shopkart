@@ -7,7 +7,7 @@ import { Container } from "@mui/system";
 import { Grid, Rating, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
-
+import products from "../db.json"
 //styles
 const imageStyle = {
   maxHeight: "500px",
@@ -19,9 +19,10 @@ const DetailPage = () => {
   const { id } = useParams();                     // parameter passed with URL (ID)
   const [data, setData] = useState(null);         // Data State
   const fetch = async () => {                     // fetch function
-    const { data } = await axios.get("/products");
+    //const { data } = await axios.get("/products");
+    
     setData(
-      data.filter((d) => {                         // Data filtering 
+      products.products.filter((d) => {                         // Data filtering 
         return d.id == id;
       })
     );
